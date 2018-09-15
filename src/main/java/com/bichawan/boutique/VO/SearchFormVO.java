@@ -8,7 +8,6 @@ public class SearchFormVO {
 
     private String lastName;
 
-    @Pattern(regexp = "[\\d]{10}")
     private String mobileNumber;
 
     public SearchFormVO() {

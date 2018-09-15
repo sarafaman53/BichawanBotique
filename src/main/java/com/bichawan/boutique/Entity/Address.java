@@ -1,6 +1,7 @@
 package com.bichawan.boutique.Entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Null;
 import javax.validation.constraints.Pattern;
 
 @Entity
@@ -14,6 +15,7 @@ public class Address {
 
     @Column(name = "STREET_ADDRESS")
     private String streetAddress;
+
 
     @Pattern(regexp = "[\\d]{6}")
     @Column(name = "PIN_CODE")

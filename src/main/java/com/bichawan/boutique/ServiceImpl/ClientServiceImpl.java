@@ -44,15 +44,15 @@ public class ClientServiceImpl implements ClientService {
         ClientSpecificationBuilder clientSearchSpecificationBuilder = new ClientSpecificationBuilder();
 
         if (!(StringUtils.isBlank(searchFormVO.getFirstName()))) {
-            clientSearchSpecificationBuilder.with("firstName", ":", searchFormVO.getFirstName());
+            clientSearchSpecificationBuilder.with("firstName", ":", searchFormVO.getFirstName().trim());
         }
 
         if (!(StringUtils.isBlank(searchFormVO.getLastName()))) {
-            clientSearchSpecificationBuilder.with("lastName", ":", searchFormVO.getLastName());
+            clientSearchSpecificationBuilder.with("lastName", ":", searchFormVO.getLastName().trim());
         }
 
         if (!(StringUtils.isBlank(searchFormVO.getMobileNumber()))) {
-            clientSearchSpecificationBuilder.with("mobileNumber", ":", searchFormVO.getMobileNumber());
+            clientSearchSpecificationBuilder.with("mobileNumber", ":", searchFormVO.getMobileNumber().trim());
         }
 
         Specification<Client> clientSearchSpecification = clientSearchSpecificationBuilder.build();
